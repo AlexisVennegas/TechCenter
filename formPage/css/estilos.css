@@ -1,0 +1,337 @@
+@import url("../css/techcenter-theme.css");
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --texto: #172238;
+    --texto-suave: #68758d;
+    --borde: #dce2eb;
+    --fondo-campo: #f7f8fa;
+    --azul: #45658f;
+    --fondo: #f7f8fa;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    background: var(--fondo);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+/* Cabecera */
+.barra-superior {
+    width: 100%;
+    height: 58px;
+    background: #fff;
+    border-bottom: 1px solid var(--borde);
+}
+
+.barra-contenido {
+    max-width: 1110px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navegacion a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.navegacion a:hover,
+.volver:hover {
+    color: var(--azul);
+}
+
+.navegacion .boton-nav {
+    padding: 10px 17px;
+    color: var(--texto);
+    border: 1px solid #9eafc7;
+    border-radius: 22px;
+}
+
+/* Contenido principal */
+.contenedor {
+    max-width: 1100px;
+    margin: 27px auto 60px;
+    padding: 0 18px;
+}
+
+.volver {
+    display: inline-block;
+    margin: 0 0 28px 15px;
+    color: #3e4859;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+/* Tarjeta con los detalles del taller */
+.tarjeta-taller {
+    position: relative;
+    padding: 23px 16px 20px;
+    margin-bottom: 28px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+}
+
+.categoria {
+    margin-bottom: 13px;
+    color: #455675;
+    font-size: 10px;
+}
+
+.plazas {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+.punto {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    vertical-align: 1px;
+    background: #7c8ba5;
+    border-radius: 50%;
+}
+
+.tarjeta-taller h1 {
+    margin: 0 0 13px;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+}
+
+.datos-taller {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    color: var(--texto-suave);
+    font-size: 10px;
+}
+
+/* Formulario */
+.seccion-formulario h2 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ayuda {
+    margin: 0 0 23px;
+    color: var(--texto-suave);
+    font-size: 11px;
+}
+
+.ayuda span,
+.campo label span,
+.aceptacion label span {
+    color: #e34b54;
+    font-weight: 700;
+}
+
+.formulario {
+    padding: 27px 24px 25px;
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 17px;
+}
+
+.rejilla-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 28px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.campo label {
+    margin-bottom: 9px;
+    color: #253149;
+    font-size: 11px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    color: var(--texto);
+    background: var(--fondo-campo);
+    border: 1px solid #bdc9d9;
+    border-radius: 6px;
+    outline: none;
+    font: inherit;
+}
+
+.campo input,
+.campo select {
+    height: 35px;
+    padding: 0 10px;
+}
+
+.campo textarea {
+    min-height: 85px;
+    padding: 10px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #718bad;
+    box-shadow: 0 0 0 2px rgb(69 101 143 / 12%);
+}
+
+.campo textarea::placeholder {
+    color: #8792a5;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.aceptacion {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+.aceptacion input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: var(--azul);
+}
+
+.aceptacion label {
+    color: #29354a;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.boton {
+    min-height: 32px;
+    padding: 0 16px;
+    background: #fff;
+    border: 1px solid #9eafc7;
+    border-radius: 20px;
+    color: #29354a;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #f0f4f9;
+}
+
+.boton-principal {
+    border-color: #8198b8;
+}
+
+.boton-secundario {
+    border-color: #c4cedc;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 620px) {
+    .barra-superior {
+        height: auto;
+        min-height: 58px;
+    }
+
+    .barra-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .navegacion {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .contenedor {
+        margin-top: 22px;
+        padding: 0 14px;
+    }
+
+    .volver {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .plazas {
+        position: static;
+        display: block;
+        margin: 0 0 12px;
+    }
+
+    .categoria {
+        margin-bottom: 10px;
+    }
+
+    .tarjeta-taller h1 {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .datos-taller {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .formulario {
+        padding: 22px 16px;
+    }
+
+    .rejilla-campos {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+}
