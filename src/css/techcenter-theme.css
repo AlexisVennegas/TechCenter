@@ -1,0 +1,227 @@
+/* Variables con los colores y medidas que acordamos en el grupo */
+:root {
+  /* Colores principales */
+  --tc-color-bg-canvas: #ffffff; /* Fondo blanco limpio */
+  --tc-color-surface-card: #f3f2f1; /* Gris claro para tarjetas */
+  --tc-color-brand-primary: #003366; /* Azul marino para títulos y logo */
+  --tc-color-text-main: #0b0c0c; /* Texto oscuro de alto contraste */
+  --tc-color-text-muted: #505a5f; /* Gris para textos secundarios */
+  --tc-color-border-subtle: #d8d8d8; /* Bordes suaves de separación */
+
+  /* Botones y acciones */
+  --tc-color-action-primary: #00703c; /* Verde para el botón principal */
+  --tc-color-action-primary-dark: #002d18; /* Verde oscuro para el borde de abajo (relieve) */
+  --tc-color-action-primary-hover: #005a30; /* Verde un poco más oscuro al pasar el ratón */
+  --tc-color-action-sec-bg: #f3f2f1; /* Fondo del botón secundario */
+  --tc-color-action-sec-border: #0b0c0c; /* Borde negro del botón secundario */
+
+  /* Accesibilidad y errores */
+  --tc-color-focus-halo: #ffbf00; /* Amarillo para el foco con teclado */
+  --tc-color-focus-stroke: #0b0c0c; /* Borde negro para que resalte el foco */
+  --tc-color-error: #d43510; /* Rojo para avisos y asteriscos */
+
+  /* Tipografía (fuente del sistema limpia) */
+  --tc-font-family: "Segoe UI", Calibri, sans-serif;
+
+  /* Tamaños de letra para ordenador */
+  --tc-font-size-h1: 34px; /* Título grande */
+  --tc-font-size-h2: 20px; /* Títulos de tarjetas */
+  --tc-font-size-body: 18px; /* Texto normal */
+  --tc-font-size-caption: 15px; /* Texto pequeño */
+  --tc-font-size-meta-label: 11px; /* Etiqueta superior (ej: FECHA) */
+  --tc-font-size-meta-value: 13.5px; /* Dato de la tarjeta */
+
+  /* Bordes redondeados */
+  --tc-radius-pill: 24px; /* Botón tipo píldora */
+  --tc-radius-card: 16px; /* Tarjetas redondeadas */
+  --tc-touch-target-min: 44px; /* Altura mínima de 44px para pulsar bien */
+}
+
+/* Reset básico para que no descuadren los paddings */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-body);
+  line-height: 1.45;
+  color: var(--tc-color-text-main);
+  background-color: var(--tc-color-bg-canvas);
+}
+
+/* Asegurar que las imágenes no se salgan ni se deformen */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Enlaces normales */
+a {
+  color: var(--tc-color-brand-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Foco accesible para navegar con el tabulador (anillo amarillo + negro) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.tc-btn:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+/* Títulos con el azul marino de la guía */
+.tc-title-h1 {
+  font-size: var(--tc-font-size-h1);
+  font-weight: 700;
+  color: var(--tc-color-brand-primary);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.tc-title-h2 {
+  font-size: var(--tc-font-size-h2);
+  font-weight: 600;
+  color: var(--tc-color-brand-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+/* Botones con forma de píldora y mínimo 44px de alto */
+.tc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tc-touch-target-min);
+  padding: 8px 18px;
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-caption);
+  font-weight: 600;
+  border-radius: var(--tc-radius-pill);
+  text-decoration: none !important;
+  cursor: pointer;
+  border: none;
+  transition:
+    background-color 0.15s ease,
+    transform 0.05s ease;
+}
+
+/* Botón principal (verde con relieve abajo) */
+.tc-btn--primary {
+  background-color: var(--tc-color-action-primary);
+  color: #ffffff;
+  border-bottom: 2px solid var(--tc-color-action-primary-dark);
+}
+
+.tc-btn--primary:hover {
+  background-color: var(--tc-color-action-primary-hover);
+}
+
+/* Al hacer clic baja 2px simulando una pulsación real */
+.tc-btn--primary:active {
+  transform: translateY(2px);
+  border-bottom-color: transparent;
+}
+
+/* Botón secundario (gris con borde fino) */
+.tc-btn--secondary {
+  background-color: var(--tc-color-action-sec-bg);
+  color: var(--tc-color-text-main);
+  border: 1px solid var(--tc-color-action-sec-border);
+}
+
+.tc-btn--secondary:hover {
+  background-color: #e5e4e3;
+}
+
+.tc-btn--secondary:active {
+  transform: translateY(1px);
+}
+
+/* Tarjeta estándar gris con bordes suaves */
+.tc-card {
+  background-color: var(--tc-color-surface-card);
+  border-radius: var(--tc-radius-card);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--tc-color-border-subtle);
+}
+
+/* Grid de las 4 cajas de datos (Fecha, Ubicación, etc.) */
+.tc-metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.tc-metadata-item {
+  background-color: var(--tc-color-surface-card);
+  border-radius: var(--tc-radius-card);
+  padding: 1rem;
+  border: 1px solid var(--tc-color-border-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Texto de arriba en mayúsculas pequeñas */
+.tc-metadata-label {
+  font-size: var(--tc-font-size-meta-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tc-color-brand-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+/* Dato principal en seminegrita */
+.tc-metadata-value {
+  font-size: var(--tc-font-size-meta-value);
+  font-weight: 600;
+  color: var(--tc-color-text-main);
+  line-height: 1.35;
+}
+
+/* Cambios automáticos para móvil (pantallas de 640px o menos) */
+@media (max-width: 640px) {
+  :root {
+    --tc-font-size-h1: 24px; /* H1 más pequeño en móvil */
+    --tc-font-size-body: 16px;
+    --tc-font-size-caption: 14px;
+  }
+
+  /* Los botones ocupan todo el ancho para pulsar fácil con el dedo */
+  .tc-btn {
+    width: 100%;
+  }
+
+  /* Las 4 tarjetas pasan a ser una lista vertical con líneas de división */
+  .tc-metadata-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: var(--tc-radius-card);
+    border: 1px solid var(--tc-color-border-subtle);
+    background-color: var(--tc-color-surface-card);
+    overflow: hidden;
+  }
+
+  .tc-metadata-item {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--tc-color-border-subtle);
+    padding: 0.85rem 1rem;
+  }
+
+  .tc-metadata-item:last-child {
+    border-bottom: none;
+  }
+}
