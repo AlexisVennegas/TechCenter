@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al taller | TechCenter</title>
+    <link rel="stylesheet" href="../formPage/css/estilos.css">
+</head>
+<body>
+    <header class="barra-superior">
+        <div class="barra-contenido">
+            <a class="logo" href="#">TechCenter</a>
+
+            <nav class="navegacion" aria-label="Navegación principal">
+                <a href="#">Inicio</a>
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Contacto</a>
+                <a class="boton-nav" href="#">Buscar cursos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <a class="volver" href="#">Volver a los detalles del taller</a>
+
+        <section class="tarjeta-taller" aria-labelledby="titulo-taller">
+            <div class="categoria">SEGURIDAD INFORMÁTICA</div>
+            <span class="plazas"><span class="punto"></span>15 plazas disponibles</span>
+
+            <h1 id="titulo-taller">Hacking Ético y Auditoría de Redes</h1>
+
+            <div class="datos-taller">
+                <span>Jueves, 15 de octubre de 2026 | 16:30 – 18:30 h</span>
+                <span>Aula 204, Edificio Principal</span>
+            </div>
+        </section>
+
+        <section class="seccion-formulario" aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Formulario de inscripción</h2>
+            <p class="ayuda">Completa los datos para reservar tu plaza. Los campos marcados con <span>*</span> son obligatorios.</p>
+
+            <form class="formulario" action="#" method="post">
+                <div class="rejilla-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo <span>*</span></label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico <span>*</span></label>
+                        <input type="email" id="correo" name="correo" autocomplete="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono de contacto</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                    </div>
+
+                    <div class="campo">
+                        <label for="dni">DNI / NIE <span>*</span></label>
+                        <input type="text" id="dni" name="dni" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nacimiento">Fecha de nacimiento <span>*</span></label>
+                        <input type="date" id="nacimiento" name="nacimiento" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="experiencia">Nivel de experiencia <span>*</span></label>
+                        <select id="experiencia" name="experiencia" required>
+                            <option value="" selected disabled></option>
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="comentarios">Comentarios o necesidades especiales</label>
+                        <textarea id="comentarios" name="comentarios" placeholder="Indica si necesitas alguna adaptación o tienes alguna consulta de accesibilidad o material."></textarea>
+                    </div>
+                </div>
+
+                <div class="aceptacion">
+                    <input type="checkbox" id="privacidad" name="privacidad" required>
+                    <label for="privacidad">He leído y acepto la política de privacidad y las condiciones de inscripción. <span>*</span></label>
+                </div>
+
+                <div class="acciones">
+                    <button class="boton boton-principal" type="submit">Enviar inscripción</button>
+                    <button class="boton boton-secundario" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
