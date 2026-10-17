@@ -219,6 +219,55 @@ input:focus-visible,
   align-items: center;
 }
 
+.tc-btn:focus-visible,
+.tc-input:focus-visible,
+.tc-filter-chip:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+.tc-filters-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tc-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 14px;
+  font-size: var(--tc-font-size-caption);
+  font-weight: var(--tc-font-weight-medium);
+  color: var(--tc-color-brand-primary);
+  background-color: var(--tc-color-surface-card);
+  border: 1px solid var(--tc-color-border-subtle);
+  border-radius: var(--tc-radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+.tc-filter-chip:hover {
+  background-color: #e5e4e3;
+}
+
+/* Chip en estado seleccionado */
+.tc-filter-chip--active {
+  background-color: var(--tc-color-brand-primary);
+  color: #ffffff;
+  border-color: var(--tc-color-text-brand);
+}
+.tc-filter-chip--active:hover {
+  background-color: black;
+  color: #ffffff;
+  border-color: var(--tc-color-text-brand);
+}
+
 /* Cambios automáticos para móvil (pantallas de 640px o menos) */
 @media (max-width: 640px) {
   :root {
