@@ -2,7 +2,6 @@
 
 **Guía de estilo e implementación CSS de la plataforma de talleres**
 
-
 Cada integrante se responsabilizará de una pantalla o parte concreta acordada con el grupo. Si el número de
 integrantes no coincide con las cuatro pantallas, repartid también componentes comunes, adaptación a móvil,
 pruebas e integración de forma equilibrada. Cada persona debe escribir código propio y poder explicar sus
@@ -12,12 +11,10 @@ deben quedar identificadas en la memoria.
 
 # Integrantes:
 
-* África Narganez Ferrer
-* Juan Ernesto Garcia Rangel
-
-* Kevin David Quispe Carillo
-* Alexis Venegas Gonzalez
-
+* África Narganez Ferrer (Pagina Confirmación formulario)
+* Juan Ernesto Garcia Rangel (Pagina Detalle de Cursos)
+* Kevin David Quispe Carillo (Pagina de inicio)
+* Alexis Venegas Gonzalez (Pagina de formulario)
 
 drive: https://drive.google.com/drive/project/1i4N_XAUdBeA84ziyZV1L7U4AihYVSP_P?usp=sharing
 
