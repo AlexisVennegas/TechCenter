@@ -1,40 +1,63 @@
 /* Variables con los colores y medidas que acordamos en el grupo */
 :root {
   /* Colores principales */
-  --tc-color-bg-canvas: #f7f8fa; /* Fondo blanco limpio */
-  --tc-color-surface-card: #f3f2f1; /* Gris claro para tarjetas */
-  --tc-color-brand-primary: #003366; /* Azul marino para títulos y logo */
-  --tc-color-text-main: #0b0c0c; /* Texto oscuro de alto contraste */
-  --tc-color-text-muted: #505a5f; /* Gris para textos secundarios */
-  --tc-color-border-subtle: #d8d8d8; /* Bordes suaves de separación */
+  --tc-color-bg-canvas: #f7f8fa;
+  /* Fondo blanco limpio */
+  --tc-color-surface-card: #f3f2f1;
+  /* Gris claro para tarjetas */
+  --tc-color-brand-primary: #003366;
+  /* Azul marino para títulos y logo */
+  --tc-color-text-main: #0b0c0c;
+  /* Texto oscuro de alto contraste */
+  --tc-color-text-muted: #505a5f;
+  /* Gris para textos secundarios */
+  --tc-color-border-subtle: #d8d8d8;
+  /* Bordes suaves de separación */
 
   /* Botones y acciones */
-  --tc-color-action-primary: #00703c; /* Verde para el botón principal */
-  --tc-color-action-primary-dark: #002d18; /* Verde oscuro para el borde de abajo (relieve) */
-  --tc-color-action-primary-hover: #005a30; /* Verde un poco más oscuro al pasar el ratón */
-  --tc-color-action-sec-bg: #f3f2f1; /* Fondo del botón secundario */
-  --tc-color-action-sec-border: #0b0c0c; /* Borde negro del botón secundario */
+  --tc-color-action-primary: #00703c;
+  /* Verde para el botón principal */
+  --tc-color-action-primary-dark: #002d18;
+  /* Verde oscuro para el borde de abajo (relieve) */
+  --tc-color-action-primary-hover: #005a30;
+  /* Verde un poco más oscuro al pasar el ratón */
+  --tc-color-action-sec-bg: #f3f2f1;
+  /* Fondo del botón secundario */
+  --tc-color-action-sec-border: #0b0c0c;
+  /* Borde negro del botón secundario */
 
   /* Accesibilidad y errores */
-  --tc-color-focus-halo: #ffbf00; /* Amarillo para el foco con teclado */
-  --tc-color-focus-stroke: #0b0c0c; /* Borde negro para que resalte el foco */
-  --tc-color-error: #d43510; /* Rojo para avisos y asteriscos */
+  --tc-color-focus-halo: #ffbf00;
+  /* Amarillo para el foco con teclado */
+  --tc-color-focus-stroke: #0b0c0c;
+  /* Borde negro para que resalte el foco */
+  --tc-color-error: #d43510;
+  /* Rojo para avisos y asteriscos */
 
   /* Tipografía (fuente del sistema limpia) */
   --tc-font-family: "Segoe UI", Calibri, sans-serif;
 
   /* Tamaños de letra para ordenador */
-  --tc-font-size-h1: 34px; /* Título grande */
-  --tc-font-size-h2: 20px; /* Títulos de tarjetas */
-  --tc-font-size-body: 18px; /* Texto normal */
-  --tc-font-size-caption: 15px; /* Texto pequeño */
-  --tc-font-size-meta-label: 11px; /* Etiqueta superior (ej: FECHA) */
-  --tc-font-size-meta-value: 13.5px; /* Dato de la tarjeta */
+  --tc-font-size-h1: 34px;
+  /* Título grande */
+  --tc-font-size-h2: 20px;
+  /* Títulos de tarjetas */
+  --tc-font-size-body: 18px;
+  /* Texto normal */
+  --tc-font-size-caption: 15px;
+  /* Texto pequeño */
+  --tc-font-size-meta-label: 11px;
+  /* Etiqueta superior (ej: FECHA) */
+  --tc-font-size-meta-value: 13.5px;
+  /* Dato de la tarjeta */
 
   /* Bordes redondeados */
-  --tc-radius-pill: 24px; /* Botón tipo píldora */
-  --tc-radius-card: 16px; /* Tarjetas redondeadas */
-  --tc-touch-target-min: 44px; /* Altura mínima de 44px para pulsar bien */
+  --tc-radius-pill: 24px;
+  /* Botón tipo píldora */
+  --tc-radius-card: 16px;
+  /* Tarjetas redondeadas */
+  --tc-touch-target-min: 44px;
+  /* Altura mínima de 44px para pulsar bien */
 }
 
 /* Reset básico para que no descuadren los paddings */
@@ -191,10 +214,65 @@ input:focus-visible,
   line-height: 1.35;
 }
 
+.tc-caption {
+  display: flex;
+  align-items: center;
+}
+
+.tc-btn:focus-visible,
+.tc-input:focus-visible,
+.tc-filter-chip:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+.tc-filters-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.tc-filter-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 14px;
+  font-size: var(--tc-font-size-caption);
+  font-weight: var(--tc-font-weight-medium);
+  color: var(--tc-color-brand-primary);
+  background-color: var(--tc-color-surface-card);
+  border: 1px solid var(--tc-color-border-subtle);
+  border-radius: var(--tc-radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+.tc-filter-chip:hover {
+  background-color: #e5e4e3;
+}
+
+/* Chip en estado seleccionado */
+.tc-filter-chip--active {
+  background-color: var(--tc-color-brand-primary);
+  color: #ffffff;
+  border-color: var(--tc-color-text-brand);
+}
+.tc-filter-chip--active:hover {
+  background-color: black;
+  color: #ffffff;
+  border-color: var(--tc-color-text-brand);
+}
+
 /* Cambios automáticos para móvil (pantallas de 640px o menos) */
 @media (max-width: 640px) {
   :root {
-    --tc-font-size-h1: 24px; /* H1 más pequeño en móvil */
+    --tc-font-size-h1: 24px;
+    /* H1 más pequeño en móvil */
     --tc-font-size-body: 16px;
     --tc-font-size-caption: 14px;
   }

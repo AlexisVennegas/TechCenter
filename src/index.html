@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TechCenter</title>
+	<link rel="stylesheet" href="../src/css/index.css">
+</head>
+
+<body>
+	<header class="tc-header">
+		<a href="./index.html" class="tc-logo">TechCenter</a>
+
+		<nav class="tc-nav" aria-label="Navegación principal">
+			<ul class="tc-nav-links">
+				<li>
+					<a href="./index.html" class="tc-nav-link">Inicio</a>
+				</li>
+				<li>
+					<a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
+				</li>
+				<li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+			</ul>
+
+			<a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
+
+			<button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+					stroke-linecap="round">
+					<line x1="3" y1="6" x2="21" y2="6"></line>
+					<line x1="3" y1="12" x2="21" y2="12"></line>
+					<line x1="3" y1="18" x2="21" y2="18"></line>
+				</svg>
+			</button>
+		</nav>
+	</header>
+	<main class="tc-container container-main">
+		<div>
+			<h1 class="tc-title-h1">Talleres tecnológicos</h1>
+			<p class="tc-caption">
+				Consulta las actividades formativas del centro e inscríbete online. Descubre talleres prácticos, cursos
+				intensivos y programas diseñados para que aprendas con ritmo y profundidad.
+			</p>
+		</div>
+		<div class="tc-filters-bar">
+			<a href="#" class="tc-filter-chip tc-filter-chip--active">Todos</a>
+			<a href="#" class="tc-filter-chip">Seguridad Informática</a>
+			<a href="#" class="tc-filter-chip">Diseño Web</a>
+			<a href="#" class="tc-filter-chip">Impresión 3D</a>
+			<a href="#" class="tc-filter-chip">Programación</a>
+			<a href="#" class="tc-filter-chip">Robótica</a>
+		</div>
+
+		<section class="tc-workshops-list">
+			<article class="tc-card container-card-taller">
+				<div class="tc-card-image">
+					<img src="../img/HackingEtico.jpg" alt="Hacking Ético">
+				</div>
+				<div class="tc-card-content card-space">
+					<span class="tc-filter-chip span-margin">Seguridad
+						Informática</span>
+					<h2 class="tc-title-h2">Hacking Ético y Auditoría de Redes</h2>
+					<p class="tc-caption"><img src="../img/calendar.png" alt="icon-calendar">Jueves, 15 de octubre de
+						2026 | 16:30 - 18:30 h</p>
+					<p class="tc-caption"><img src="../img/map-pin.png" alt="icon-map">Aula 204 | 15 plazas disponibles |
+						Nivel iniciación</p>
+				</div>
+				<div class="tc-card-action ">
+					<a href="./detalle-taller.html" class="tc-btn tc-btn--secondary">Ver detalles</a>
+				</div>
+			</article>
+			<article class="tc-card container-card-taller">
+				<div class="tc-card-image">
+					<img src="../img/MaquetacionAvanzadaCss.jpg" alt="Maquetación Avanzada">
+				</div>
+				<div class="tc-card-content card-space">
+					<span class="tc-filter-chip span-margin">Diseño Web</span>
+					<h2 class="tc-title-h2">Maquetación Avanzada con CSS Grid y Flexbox</h2>
+					<p class="tc-caption"><img src="../img/calendar.png" alt="icon-calendar"> Lunes, 19 de octubre de
+						2026 | 17:00 - 19:00 h</p>
+					<p class="tc-caption"><img src="../img/map-pin.png" alt="icon-map">Aula Virtual / Online | 25 plazas
+						disponibles | Nivel intermedio</p>
+				</div>
+				<div class="tc-card-action">
+					<a href="./detalle-taller.html" class="tc-btn tc-btn--secondary">Ver detalles</a>
+				</div>
+			</article>
+			<article class="tc-card container-card-taller">
+				<div class="tc-card-image">
+					<img src="../img/MaquetacionAvanzadaCss.jpg" alt="Maquetación Avanzada">
+				</div>
+				<div class="tc-card-content card-space">
+					<span class="tc-filter-chip span-margin">Diseño
+						Web</span>
+					<h2 class="tc-title-h2">Maquetación Avanzada con CSS Grid y Flexbox</h2>
+					<p class="tc-caption"><img src="../img/calendar.png" alt="icon-calendar">Viernes, 23 de octubre de
+						2026 | 11:30 - 13:30 h</p>
+					<p class="tc-caption"><img src="../img/map-pin.png" alt="icon-map">Taller de Fabricación | 10 plazas
+						disponibles | Nivel básico</p>
+				</div>
+				<div class="tc-card-action">
+					<a href="./detalle-taller.html" class="tc-btn tc-btn--secondary">Ver detalles</a>
+				</div>
+			</article>
+
+		</section>
+	</main>
+	<footer class="tc-footer">
+      <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+      <span>Diseño de Interfaces Web (DA2D1A)</span>
+    </footer>
+</body>
+
+</html>
