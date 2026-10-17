@@ -1,7 +1,7 @@
 /* Variables con los colores y medidas que acordamos en el grupo */
 :root {
   /* Colores principales */
-  --tc-color-bg-canvas: #ffffff; /* Fondo blanco limpio */
+  --tc-color-bg-canvas: #f7f8fa; /* Fondo blanco limpio */
   --tc-color-surface-card: #f3f2f1; /* Gris claro para tarjetas */
   --tc-color-brand-primary: #003366; /* Azul marino para títulos y logo */
   --tc-color-text-main: #0b0c0c; /* Texto oscuro de alto contraste */

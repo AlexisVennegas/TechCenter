@@ -4,24 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción al taller | TechCenter</title>
-    <link rel="stylesheet" href="../formPage/css/estilos.css">
+    <link rel="stylesheet" href="../src/css/formulario.css">
 </head>
 <body>
-    <header class="barra-superior">
-        <div class="barra-contenido">
-            <a class="logo" href="#">TechCenter</a>
-
-            <nav class="navegacion" aria-label="Navegación principal">
-                <a href="#">Inicio</a>
-                <a href="#">Sobre nosotros</a>
-                <a href="#">Contacto</a>
-                <a class="boton-nav" href="#">Buscar cursos</a>
-            </nav>
-        </div>
-    </header>
+   
 
     <main class="contenedor">
-        <a class="volver" href="#">Volver a los detalles del taller</a>
+         <header class="tc-header">
+        <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
+
+        <nav class="tc-nav" aria-label="Navegación principal">
+          <ul class="tc-nav-links">
+            <li>
+              <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="sobre-nosotros.html" class="tc-nav-link"
+                >Sobre nosotros</a
+              >
+            </li>
+            <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+          </ul>
+
+          <!-- Botón para volver al catálogo -->
+          <a href="listado-talleres.html" class="tc-btn tc-btn--secondary"
+            >Buscar cursos</a
+          >
+
+          <!-- Botón menú hamburguesa accesible para móvil (44x44px) -->
+          <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </nav>
+      </header>
+        <a class="volver" href="./detalle-taller.html">Volver a los detalles del taller</a>
 
         <section class="tarjeta-taller" aria-labelledby="titulo-taller">
             <div class="categoria">SEGURIDAD INFORMÁTICA</div>
@@ -93,6 +121,13 @@
                 </div>
             </form>
         </section>
+
+         <footer class="tc-footer">
+        <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+        <span>Diseño de Interfaces Web (DA2D1A)</span>
+      </footer>
     </main>
+
+     
 </body>
 </html>
