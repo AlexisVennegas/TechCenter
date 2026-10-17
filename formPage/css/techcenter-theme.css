@@ -16,9 +16,20 @@
     0,
     0,
     0.08
+  
   ); /* Capa tonal translúcida al 8% en hover (M3) */
+  --tc-width-full: 100%
 
 
+    --texto: #172238;
+    --texto-suave: #68758d;
+    --height-barra-superior: 58px;
+    --borde: #dce2eb;
+    --fondo-campo: #f7f8fa;
+    --azul: #45658f;
+    --fondo: #f7f8fa;
+    --max-width: 1110px;
+  
   /* Header */
   --tc-color-text-header: #667085; /* Gris marino corporativo (títulos y acentos) */
   --tc-color-header-bg: #f3f2f1; /* Fondo gris tenue para el header */
@@ -386,6 +397,8 @@ body {
     flex-direction: column;
     width: 100%;
   }
+
+  .tc-
 
   /* Las 4 cajas de metadatos colapsan a una lista vertical con divisores */
   .tc-metadata-grid {
