@@ -1,94 +1,70 @@
-/* ==========================================================================
-   TECHCENTER DESIGN SYSTEM — GLOBAL STYLESHEET
-   Proyecto: TechCenter
-   Modelo Híbrido: Accesibilidad GOV.UK (WCAG AAA) + Morfología Material 3 (M3)
-   ========================================================================== */
-
+/* Variables con los colores y medidas que acordamos en el grupo */
 :root {
-  /* ------------------------------------------------------------------------
-     1. PALETA DE COLOR Y TOKENS SEMÁNTICOS
-     ------------------------------------------------------------------------ */
-  /* Fondos y Superficies */
-  --tc-color-bg-canvas: #ffffff; /* Fondo limpio principal de pantalla (WCAG AAA) */
-  --tc-color-surface-card: #f3f2f1; /* Fondo gris tenue para tarjetas y módulos */
-  --tc-color-surface-hover: rgba(
-    0,
-    0,
-    0,
-    0.08
-  ); /* Capa tonal translúcida al 8% en hover (M3) */
+  /* Colores principales */
+  --tc-color-bg-canvas: #f7f8fa;
+  /* Fondo blanco limpio */
+  --tc-color-surface-card: #f3f2f1;
+  /* Gris claro para tarjetas */
+  --tc-color-brand-primary: #003366;
+  /* Azul marino para títulos y logo */
+  --tc-color-text-main: #0b0c0c;
+  /* Texto oscuro de alto contraste */
+  --tc-color-text-muted: #505a5f;
+  /* Gris para textos secundarios */
+  --tc-color-border-subtle: #d8d8d8;
+  /* Bordes suaves de separación */
 
-  /* Textos y Bordes Institucionales */
-  --tc-color-text-brand: #003366; /* Azul marino corporativo (títulos y acentos) */
-  --tc-color-text-main: #0b0c0c; /* Texto base carbón de alto contraste (Ratio ≥ 7:1) */
-  --tc-color-border-subtle: #d8d8d8; /* Borde neutro para separar tarjetas e inputs */
+  /* Botones y acciones */
+  --tc-color-action-primary: #00703c;
+  /* Verde para el botón principal */
+  --tc-color-action-primary-dark: #002d18;
+  /* Verde oscuro para el borde de abajo (relieve) */
+  --tc-color-action-primary-hover: #005a30;
+  /* Verde un poco más oscuro al pasar el ratón */
+  --tc-color-action-sec-bg: #f3f2f1;
+  /* Fondo del botón secundario */
+  --tc-color-action-sec-border: #0b0c0c;
+  /* Borde negro del botón secundario */
 
-  /* Botones y Acciones */
-  --tc-color-primary: #00703c; /* Verde primario para avance principal y éxito */
-  --tc-color-primary-dark: #002d18; /* Verde oscuro para simular relieve 3D en el botón */
-  --tc-color-primary-hover: #005a30; /* Verde oscurecido al pasar el ratón */
+  /* Accesibilidad y errores */
+  --tc-color-focus-halo: #ffbf00;
+  /* Amarillo para el foco con teclado */
+  --tc-color-focus-stroke: #0b0c0c;
+  /* Borde negro para que resalte el foco */
+  --tc-color-error: #d43510;
+  /* Rojo para avisos y asteriscos */
 
-  --tc-color-secondary-bg: #f3f2f1; /* Fondo neutro para botón secundario */
-  --tc-color-secondary-border: #0b0c0c; /* Contorno negro para botón secundario */
+  /* Tipografía (fuente del sistema limpia) */
+  --tc-font-family: "Segoe UI", Calibri, sans-serif;
 
-  --tc-color-accent: #638600; /* Tono verde-ámbar para detalles de soporte */
+  /* Tamaños de letra para ordenador */
+  --tc-font-size-h1: 34px;
+  /* Título grande */
+  --tc-font-size-h2: 20px;
+  /* Títulos de tarjetas */
+  --tc-font-size-body: 18px;
+  /* Texto normal */
+  --tc-font-size-caption: 15px;
+  /* Texto pequeño */
+  --tc-font-size-meta-label: 11px;
+  /* Etiqueta superior (ej: FECHA) */
+  --tc-font-size-meta-value: 13.5px;
+  /* Dato de la tarjeta */
 
-  /* Estados de Accesibilidad y Error */
-  --tc-color-focus-halo: #ffbf00; /* Halo amarillo de alta visibilidad para teclado */
-  --tc-color-focus-stroke: #0b0c0c; /* Reborde negro exterior de contraste para el foco */
-  --tc-color-error: #d43510; /* Rojo para asteriscos obligatorios, avisos y errores */
-
-  /* ------------------------------------------------------------------------
-     2. ESCALA TIPOGRÁFICA Y FUENTES (Segoe UI / Calibri)
-     ------------------------------------------------------------------------ */
-  --tc-font-family: "Segoe UI", Calibri, system-ui, -apple-system, sans-serif;
-  --tc-line-height-normal: 1.4; /* Interlineado estándar para textos de lectura */
-  --tc-line-height-tight: 1.25; /* Interlineado compacto para títulos */
-
-  /* Pesos de Fuente */
-  --tc-font-weight-regular: 400; /* Texto base normal */
-  --tc-font-weight-medium: 600; /* Seminegrita para datos clave y subtítulos */
-  --tc-font-weight-bold: 700; /* Negrita para títulos principales */
-
-  /* Tamaños en Escritorio */
-  --tc-font-size-h1: 34px; /* Título principal de la pantalla */
-  --tc-font-size-h2: 20px; /* Cabeceras de tarjetas y formularios */
-  --tc-font-size-body: 19px; /* Cuerpo de texto y párrafos */
-  --tc-font-size-caption: 16px; /* Leyendas, textos secundarios y botones */
-  --tc-font-size-meta-label: 11px; /* Etiqueta superior en cajas de metadatos */
-  --tc-font-size-meta-value: 13.5px; /* Dato o valor numérico en metadatos */
-
-  /* ------------------------------------------------------------------------
-     3. GEOMETRÍA, RADIOS Y ERGONOMÍA TÁCTIL
-     ------------------------------------------------------------------------ */
-  --tc-radius-pill: 24px; /* Forma de píldora redondeada para botones (M3) */
-  --tc-radius-card: 16px; /* Esquinas redondeadas suaves para tarjetas (M3) */
-  --tc-radius-chip: 9999px; /* Borde ovalado completo para chips de filtro */
-  --tc-radius-input: 8px; /* Esquinas ligeramente redondeadas para inputs */
-
-  --tc-touch-target-min: 44px; /* Altura táctil mínima accesible (44x44px GOV.UK) */
-  --tc-btn-padding-y: 8px; /* Relleno vertical del botón */
-  --tc-btn-padding-x: 10px; /* Relleno horizontal del botón */
+  /* Bordes redondeados */
+  --tc-radius-pill: 24px;
+  /* Botón tipo píldora */
+  --tc-radius-card: 16px;
+  /* Tarjetas redondeadas */
+  --tc-touch-target-min: 44px;
+  /* Altura mínima de 44px para pulsar bien */
 }
 
-/* ==========================================================================
-   BREAKPOINTS RESPONSIVE (Móviles ≤ 640px)
-   ========================================================================== */
-@media (max-width: 640px) {
-  :root {
-    --tc-font-size-h1: 24px; /* Reduce el título para no desbordar en móvil */
-    --tc-font-size-body: 16px; /* Ajusta el cuerpo de texto para pantallas pequeñas */
-    --tc-font-size-caption: 14px; /* Reduce leyendas y textos de apoyo */
-  }
-}
-
-/* ==========================================================================
-   RESET Y BASE GENERAL
-   ========================================================================== */
+/* Reset básico para que no descuadren los paddings */
 *,
 *::before,
 *::after {
-  box-sizing: border-box; /* El padding y borde no alteran el ancho total */
+  box-sizing: border-box;
 }
 
 body {
@@ -96,88 +72,94 @@ body {
   padding: 0;
   font-family: var(--tc-font-family);
   font-size: var(--tc-font-size-body);
-  line-height: var(--tc-line-height-normal);
+  line-height: 1.45;
   color: var(--tc-color-text-main);
   background-color: var(--tc-color-bg-canvas);
-  -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   JERARQUÍA TIPOGRÁFICA
-   ========================================================================== */
-/* Título principal de cada pantalla */
+/* Asegurar que las imágenes no se salgan ni se deformen */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Enlaces normales */
+a {
+  color: var(--tc-color-brand-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Foco accesible para navegar con el tabulador (anillo amarillo + negro) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.tc-btn:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+/* Títulos con el azul marino de la guía */
 .tc-title-h1 {
   font-size: var(--tc-font-size-h1);
-  font-weight: var(--tc-font-weight-bold);
-  line-height: var(--tc-line-height-tight);
-  color: var(--tc-color-text-brand);
-  margin-top: 0;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--tc-color-brand-primary);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
 }
 
-/* Subtítulos y cabeceras dentro de tarjetas o bloques */
 .tc-title-h2 {
   font-size: var(--tc-font-size-h2);
-  font-weight: var(--tc-font-weight-medium);
-  line-height: var(--tc-line-height-tight);
-  color: var(--tc-color-text-brand);
-  margin-top: 0;
-  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--tc-color-brand-primary);
+  margin: 0 0 0.75rem 0;
 }
 
-/* Texto de apoyo, leyendas o descripciones pequeñas */
-.tc-caption {
-  font-size: var(--tc-font-size-caption);
-  color: var(--tc-color-text-main);
-}
-
-/* ==========================================================================
-   SISTEMA DE BOTONES (Píldora M3 + Mecánica física GOV.UK)
-   ========================================================================== */
-/* Clase base obligatoria para todos los botones */
+/* Botones con forma de píldora y mínimo 44px de alto */
 .tc-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(
-    --tc-touch-target-min
-  ); /* Asegura los 44px de accesibilidad táctil */
-  padding: var(--tc-btn-padding-y) var(--tc-btn-padding-x);
+  min-height: var(--tc-touch-target-min);
+  padding: 8px 18px;
   font-family: var(--tc-font-family);
   font-size: var(--tc-font-size-caption);
-  font-weight: var(--tc-font-weight-medium);
-  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--tc-radius-pill);
+  text-decoration: none !important;
   cursor: pointer;
-  border-radius: var(--tc-radius-pill); /* Forma en píldora redondeada (24px) */
   border: none;
   transition:
     background-color 0.15s ease,
     transform 0.05s ease;
-  user-select: none;
 }
 
-/* Botón Primario: para avanzar flujos ("Inscribirme", "Enviar") */
+/* Botón principal (verde con relieve abajo) */
 .tc-btn--primary {
-  background-color: var(--tc-color-primary);
+  background-color: var(--tc-color-action-primary);
   color: #ffffff;
-  border-bottom: 2px solid var(--tc-color-primary-dark); /* Borde 3D para relieve táctil */
+  border-bottom: 2px solid var(--tc-color-action-primary-dark);
 }
 
 .tc-btn--primary:hover {
-  background-color: var(--tc-color-primary-hover);
+  background-color: var(--tc-color-action-primary-hover);
 }
 
-/* Estado Active: simula pulsación mecánica hundiéndose 2px */
+/* Al hacer clic baja 2px simulando una pulsación real */
 .tc-btn--primary:active {
-  transform: translateY(2px); /* Se desplaza hacia abajo al pulsar */
-  border-bottom-color: transparent; /* Oculta el relieve 3D durante el clic */
+  transform: translateY(2px);
+  border-bottom-color: transparent;
 }
 
-/* Botón Secundario: para cancelar o volver atrás */
+/* Botón secundario (gris con borde fino) */
 .tc-btn--secondary {
-  background-color: var(--tc-color-secondary-bg);
+  background-color: var(--tc-color-action-sec-bg);
   color: var(--tc-color-text-main);
-  border: 1px solid var(--tc-color-secondary-border);
+  border: 1px solid var(--tc-color-action-sec-border);
 }
 
 .tc-btn--secondary:hover {
@@ -188,203 +170,70 @@ body {
   transform: translateY(1px);
 }
 
-/* Botón de Alerta: acciones destructivas o críticas */
-.tc-btn--warning {
-  background-color: var(--tc-color-error);
-  color: #ffffff;
-}
-
-.tc-btn--warning:hover {
-  background-color: #b52b0c;
-}
-
-/* Foco Accesible por Teclado: Doble halo GOV.UK (Amarillo + Trazo negro de 3px) */
-.tc-btn:focus-visible,
-.tc-input:focus-visible,
-.tc-filter-chip:focus-visible {
-  outline: 3px solid var(--tc-color-focus-stroke);
-  outline-offset: 0;
-  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
-}
-
-/* ==========================================================================
-   TARJETAS Y CONTENEDORES
-   ========================================================================== */
-/* Tarjeta estándar con fondo tonal gris suave */
+/* Tarjeta estándar gris con bordes suaves */
 .tc-card {
   background-color: var(--tc-color-surface-card);
-  border-radius: var(--tc-radius-card); /* Esquinas redondeadas (16px) */
-  padding: 1.5rem;
+  border-radius: var(--tc-radius-card);
+  padding: 1.5rem 1.75rem;
   margin-bottom: 1.5rem;
   border: 1px solid var(--tc-color-border-subtle);
 }
 
-/* Banner superior fijo en formularios: recuerda el curso seleccionado */
-.tc-persistence-banner {
-  background-color: var(--tc-color-surface-card);
-  border-left: 6px solid var(--tc-color-text-brand); /* Borde azul marino grueso a la izquierda */
-  border-radius: var(--tc-radius-card);
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Tarjeta final de confirmación con borde verde de éxito */
-.tc-confirmation-card {
-  background-color: var(--tc-color-surface-card);
-  border-radius: var(--tc-radius-card);
-  border: 2px solid var(--tc-color-primary);
-  padding: 2rem;
-  text-align: center;
-}
-
-/* ==========================================================================
-   CAJAS MODULARES DE METADATOS (Fecha, Ubicación, Plazas, Duración)
-   ========================================================================== */
-/* Contenedor en cuadrícula de 4 columnas para escritorio */
+/* Grid de las 4 cajas de datos (Fecha, Ubicación, etc.) */
 .tc-metadata-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
-/* Cada una de las 4 tarjetas individuales */
 .tc-metadata-item {
   background-color: var(--tc-color-surface-card);
   border-radius: var(--tc-radius-card);
-  padding: 0.75rem 1rem;
+  padding: 1rem;
   border: 1px solid var(--tc-color-border-subtle);
   display: flex;
   flex-direction: column;
 }
 
-/* Etiqueta superior en mayúsculas (ej: "FECHA", "PLAZAS") */
+/* Texto de arriba en mayúsculas pequeñas */
 .tc-metadata-label {
   font-size: var(--tc-font-size-meta-label);
-  font-weight: var(--tc-font-weight-bold);
+  font-weight: 700;
   text-transform: uppercase;
-  color: var(--tc-color-text-brand);
+  color: var(--tc-color-brand-primary);
   letter-spacing: 0.05em;
-  margin-bottom: 0.25rem;
-}
-
-/* Valor numérico o texto clave (ej: "15 Octubre", "20 plazas") */
-.tc-metadata-value {
-  font-size: var(--tc-font-size-meta-value);
-  font-weight: var(--tc-font-weight-medium);
-  color: var(--tc-color-text-main);
-  white-space: nowrap; /* Impide saltos de línea desordenados */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Agrega '...' si el texto es excesivo */
-}
-
-/* ==========================================================================
-   FORMULARIOS E INPUTS
-   ========================================================================== */
-/* Contenedor vertical de cada campo */
-.tc-form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
-}
-
-/* Etiqueta del campo */
-.tc-label {
-  font-size: var(--tc-font-size-caption);
-  font-weight: var(--tc-font-weight-medium);
-  color: var(--tc-color-text-main);
   margin-bottom: 0.35rem;
 }
 
-/* Asterisco rojo para campos obligatorios */
-.tc-required-asterisk {
-  color: var(--tc-color-error);
-  font-weight: var(--tc-font-weight-bold);
-  margin-left: 0.2rem;
-}
-
-/* Campo de entrada de texto */
-.tc-input {
-  min-height: var(--tc-touch-target-min); /* Altura mínima de 44px */
-  padding: 0.5rem 0.75rem;
-  font-family: var(--tc-font-family);
-  font-size: var(--tc-font-size-caption);
+/* Dato principal en seminegrita */
+.tc-metadata-value {
+  font-size: var(--tc-font-size-meta-value);
+  font-weight: 600;
   color: var(--tc-color-text-main);
-  background-color: #ffffff;
-  border: 1.5px solid var(--tc-color-border-subtle);
-  border-radius: var(--tc-radius-input);
-  transition: border-color 0.15s ease;
+  line-height: 1.35;
 }
 
-/* Borde rojo cuando el campo falla la validación */
-.tc-input--error {
-  border-color: var(--tc-color-error);
-  border-width: 2px;
-}
-
-/* Mensaje explicativo debajo del campo con error */
-.tc-error-message {
-  font-size: var(--tc-font-size-caption);
-  color: var(--tc-color-error);
-  font-weight: var(--tc-font-weight-medium);
-  margin-top: 0.35rem;
-}
-
-/* ==========================================================================
-   CHIPS DE FILTRO (Filter Chips)
-   ========================================================================== */
-/* Etiqueta ovalada para filtros temáticos */
-.tc-filter-chip {
-  display: inline-flex;
-  align-items: center;
-  min-height: 32px;
-  padding: 4px 14px;
-  font-size: var(--tc-font-size-caption);
-  font-weight: var(--tc-font-weight-medium);
-  color: var(--tc-color-text-brand);
-  background-color: var(--tc-color-surface-card);
-  border: 1px solid var(--tc-color-border-subtle);
-  border-radius: var(--tc-radius-chip);
-  cursor: pointer;
-  text-decoration: none;
-  user-select: none;
-  transition: background-color 0.15s ease;
-}
-
-.tc-filter-chip:hover {
-  background-color: #e5e4e3;
-}
-
-/* Chip en estado seleccionado */
-.tc-filter-chip--active {
-  background-color: var(--tc-color-text-brand);
-  color: #ffffff;
-  border-color: var(--tc-color-text-brand);
-}
-
-/* ==========================================================================
-   COMPORTAMIENTO RESPONSIVE (MÓVIL ≤ 640px)
-   ========================================================================== */
+/* Cambios automáticos para móvil (pantallas de 640px o menos) */
 @media (max-width: 640px) {
-  /* En móvil, los botones se apilan y ocupan todo el ancho (full-width) */
-  .tc-btn,
-  .tc-btn-group .tc-btn {
-    width: 100%;
-    margin-bottom: 0.5rem;
+  :root {
+    --tc-font-size-h1: 24px;
+    /* H1 más pequeño en móvil */
+    --tc-font-size-body: 16px;
+    --tc-font-size-caption: 14px;
   }
 
-  .tc-btn-group {
-    display: flex;
-    flex-direction: column;
+  /* Los botones ocupan todo el ancho para pulsar fácil con el dedo */
+  .tc-btn {
     width: 100%;
   }
 
-  /* Las 4 cajas de metadatos colapsan a una lista vertical con divisores */
+  /* Las 4 tarjetas pasan a ser una lista vertical con líneas de división */
   .tc-metadata-grid {
-    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-columns: 1fr;
     gap: 0;
-    border: 1px solid var(--tc-color-border-subtle);
     border-radius: var(--tc-radius-card);
+    border: 1px solid var(--tc-color-border-subtle);
     background-color: var(--tc-color-surface-card);
     overflow: hidden;
   }
@@ -392,11 +241,11 @@ body {
   .tc-metadata-item {
     border: none;
     border-radius: 0;
-    border-bottom: 1px solid var(--tc-color-border-subtle); /* Divisor entre datos */
-    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--tc-color-border-subtle);
+    padding: 0.85rem 1rem;
   }
 
   .tc-metadata-item:last-child {
-    border-bottom: none; /* Quita el divisor del último elemento */
+    border-bottom: none;
   }
 }
