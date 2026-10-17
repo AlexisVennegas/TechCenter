@@ -214,6 +214,11 @@ input:focus-visible,
   line-height: 1.35;
 }
 
+.tc-caption {
+  display: flex;
+  align-items: center;
+}
+
 /* Cambios automáticos para móvil (pantallas de 640px o menos) */
 @media (max-width: 640px) {
   :root {
