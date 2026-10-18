@@ -69,16 +69,21 @@ button[type="button"].tc-menu-btn {
   grid-area: texto;
 }
 
-/* Categoría superior */
+/* Categoría superior con formato oficial de metadato */
 .tc-hero-category {
   display: block;
+  font-size: var(--tc-font-size-meta-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tc-color-brand-primary);
+  letter-spacing: 0.05em;
   margin-bottom: 0.35rem;
 }
 
-/* Párrafo descriptivo del taller */
+/* Párrafo descriptivo del taller (interlineado 1.4 según guía) */
 .tc-hero-description {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Contenedor de imagen con protección de proporción */
@@ -193,8 +198,10 @@ a[href$=".html"].tc-back-link {
     max-height: 220px;
   }
 
+  /* Los botones se apilan verticalmente y ocupan el ancho completo */
   .tc-cta-buttons {
     flex-direction: column;
+    width: 100%;
   }
 
   .tc-footer {

@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripción al taller | TechCenter</title>
     <link rel="stylesheet" href="../src/css/formulario.css">
 </head>
-
 <body>
-
+   
 
     <main class="contenedor">
-        <header class="tc-header">
-            <a href="./index.html" class="tc-logo">TechCenter</a>
+         <header class="tc-header">
+        <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
 
-            <nav class="tc-nav" aria-label="Navegación principal">
-                <ul class="tc-nav-links">
-                    <li>
-                        <a href="./index.html" class="tc-nav-link">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
-                    </li>
-                    <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
-                </ul>
+        <nav class="tc-nav" aria-label="Navegación principal">
+          <ul class="tc-nav-links">
+            <li>
+              <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="sobre-nosotros.html" class="tc-nav-link"
+                >Sobre nosotros</a
+              >
+            </li>
+            <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+          </ul>
 
-                <!-- Botón para volver al catálogo -->
-                <a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
+          <!-- Botón para volver al catálogo -->
+          <a href="listado-talleres.html" class="tc-btn tc-btn--secondary"
+            >Buscar cursos</a
+          >
 
-                <!-- Botón menú hamburguesa accesible para móvil (44x44px) -->
-                <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                        stroke-linecap="round">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </nav>
-        </header>
+          <!-- Botón menú hamburguesa accesible para móvil (44x44px) -->
+          <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </nav>
+      </header>
         <a class="volver" href="./detalle-taller.html">Volver a los detalles del taller</a>
 
         <section class="tarjeta-taller" aria-labelledby="titulo-taller">
@@ -56,8 +65,7 @@
 
         <section class="seccion-formulario" aria-labelledby="titulo-formulario">
             <h2 id="titulo-formulario">Formulario de inscripción</h2>
-            <p class="ayuda">Completa los datos para reservar tu plaza. Los campos marcados con <span>*</span> son
-                obligatorios.</p>
+            <p class="ayuda">Completa los datos para reservar tu plaza. Los campos marcados con <span>*</span> son obligatorios.</p>
 
             <form class="formulario" action="#" method="post">
                 <div class="rejilla-campos">
@@ -98,15 +106,13 @@
 
                     <div class="campo campo-completo">
                         <label for="comentarios">Comentarios o necesidades especiales</label>
-                        <textarea id="comentarios" name="comentarios"
-                            placeholder="Indica si necesitas alguna adaptación o tienes alguna consulta de accesibilidad o material."></textarea>
+                        <textarea id="comentarios" name="comentarios" placeholder="Indica si necesitas alguna adaptación o tienes alguna consulta de accesibilidad o material."></textarea>
                     </div>
                 </div>
 
                 <div class="aceptacion">
                     <input type="checkbox" id="privacidad" name="privacidad" required>
-                    <label for="privacidad">He leído y acepto la política de privacidad y las condiciones de
-                        inscripción. <span>*</span></label>
+                    <label for="privacidad">He leído y acepto la política de privacidad y las condiciones de inscripción. <span>*</span></label>
                 </div>
 
                 <div class="acciones">
@@ -116,13 +122,12 @@
             </form>
         </section>
 
-        <footer class="tc-footer">
-            <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
-            <span>Diseño de Interfaces Web (DA2D1A)</span>
-        </footer>
+         <footer class="tc-footer">
+        <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+        <span>Diseño de Interfaces Web (DA2D1A)</span>
+      </footer>
     </main>
 
-
+     
 </body>
-
 </html>

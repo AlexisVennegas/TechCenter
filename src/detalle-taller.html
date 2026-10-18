@@ -1,151 +1,166 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechCenter — Hacking Ético y Auditoría de Redes</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TechCenter — Hacking Ético y Auditoría de Redes</title>
+    <!-- 1. Hoja de estilos compartida del grupo (variables, tipografía y componentes) -->
+    <link rel="stylesheet" href="CSS/techcenter-theme.css" />
 
-  <!-- 1. Hoja de estilos compartida del grupo (variables, tipografía y componentes) -->
-  <link rel="stylesheet" href="CSS/techcenter-theme.css" />
+    <!-- 2. Hoja de estilos específica de esta pantalla -->
+    <link rel="stylesheet" href="CSS/detalle-taller.css" />
+  </head>
+  <body>
+    <div class="tc-page-container">
+      <!-- Cabecera institucional -->
+      <header class="tc-header">
+        <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
 
-  <!-- 2. Hoja de estilos específica de esta pantalla -->
-  <link rel="stylesheet" href="CSS/detalle-taller.css" />
-</head>
+        <nav class="tc-nav" aria-label="Navegación principal">
+          <ul class="tc-nav-links">
+            <li>
+              <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="sobre-nosotros.html" class="tc-nav-link"
+                >Sobre nosotros</a
+              >
+            </li>
+            <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+          </ul>
 
-<body>
-  <div class="tc-page-container">
-    <!-- Cabecera institucional -->
-    <header class="tc-header">
-      <a href="./index.html" class="tc-logo">TechCenter</a>
+          <!-- Botón para volver al catálogo -->
+          <a href="listado-talleres.html" class="tc-btn tc-btn--secondary"
+            >Buscar cursos</a
+          >
 
-      <nav class="tc-nav" aria-label="Navegación principal">
-        <ul class="tc-nav-links">
-          <li>
-            <a href="./index.html" class="tc-nav-link">Inicio</a>
-          </li>
-          <li>
-            <a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
-          </li>
-          <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
-        </ul>
+          <!-- Botón menú hamburguesa accesible para móvil (44x44px) -->
+          <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"zxcs
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </nav>
+      </header>
 
-        <!-- Botón para volver al catálogo -->
-        <a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
+      <main>
+        <!-- Presentación del taller (Hero maquetado con Grid) -->
+        <section class="tc-hero">
+          <div class="tc-hero-texto">
+            <span class="tc-metadata-label tc-hero-category">
+              Seguridad Informática
+            </span>
+            <h1 class="tc-title-h1">Hacking Ético y Auditoría de Redes</h1>
+            <p class="tc-hero-description">
+              Aprende los fundamentos del hacking ético y las técnicas de
+              auditoría de redes en un taller 100% práctico. Trabajarás con
+              herramientas reales como Nmap, Wireshark y Metasploit en un
+              entorno de laboratorio controlado. Ideal para quienes quieren
+              iniciarse en ciberseguridad con una base sólida y responsable.
+            </p>
+          </div>
 
-        <!-- Botón menú hamburguesa accesible para móvil (44x44px) -->
-        <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round">
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </nav>
-    </header>
+          <!-- Imagen del taller con ratio protegido -->
+          <div class="tc-hero-imagen">
+            <img
+              src="../img/hacking.webp"
+              alt="Ilustración del laboratorio de redes y ciberseguridad"
+              width="800"
+              height="450"
+            />
+          </div>
+        </section>
 
-    <main>
-      <!-- Presentación del taller (Hero maquetado con Grid) -->
-      <section class="tc-hero">
-        <div class="tc-hero-texto">
-          <span class="tc-metadata-label tc-hero-category">
-            Seguridad Informática
-          </span>
-          <h1 class="tc-title-h1">Hacking Ético y Auditoría de Redes</h1>
-          <p class="tc-hero-description">
-            Aprende los fundamentos del hacking ético y las técnicas de
-            auditoría de redes en un taller 100% práctico. Trabajarás con
-            herramientas reales como Nmap, Wireshark y Metasploit en un
-            entorno de laboratorio controlado. Ideal para quienes quieren
-            iniciarse en ciberseguridad con una base sólida y responsable.
+        <hr class="tc-divider" />
+
+        <!-- Enlace para volver al listado de talleres -->
+        <a href="listado-talleres.html" class="tc-back-link">
+          &larr; Volver al listado de talleres
+        </a>
+
+        <!-- Cajas modulares de metadatos (Grid en escritorio, lista en móvil) -->
+        <section class="tc-metadata-grid" aria-label="Datos del taller">
+          <article class="tc-metadata-item">
+            <span class="tc-metadata-label">Fecha y horario</span>
+            <span class="tc-metadata-value">
+              Jueves, 15 de octubre de 2026 &middot; 16:30 &ndash; 18:30 h
+            </span>
+          </article>
+
+          <article class="tc-metadata-item">
+            <span class="tc-metadata-label">Ubicación</span>
+            <span class="tc-metadata-value">
+              Aula 204, Edificio Principal
+            </span>
+          </article>
+
+          <article class="tc-metadata-item">
+            <span class="tc-metadata-label">Plazas y nivel</span>
+            <span class="tc-metadata-value">
+              15 disponibles &middot; Nivel iniciación
+            </span>
+          </article>
+
+          <article class="tc-metadata-item">
+            <span class="tc-metadata-label">Duración</span>
+            <span class="tc-metadata-value"> 2 horas académicas </span>
+          </article>
+        </section>
+
+        <!-- Información y requisitos del taller -->
+        <section class="tc-card">
+          <h2 class="tc-title-h2">Información para el alumnado</h2>
+          <ul class="tc-list">
+            <li>No se requieren conocimientos previos de programación.</li>
+            <li>Certificado al finalizar el taller.</li>
+            <li>
+              Plazas limitadas &ndash; confirma tu asistencia con antelación.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Tarjeta CTA enlazada a la pantalla de formulario -->
+        <section class="tc-card tc-cta-card">
+          <h2 class="tc-title-h2">
+            ¿Listo para dar tus primeros pasos en ciberseguridad?
+          </h2>
+          <p class="tc-caption tc-cta-caption">
+            Aprende los fundamentos de la ciberseguridad de la mano de expertos
+            y comienza tu camino hacia una carrera más segura.
           </p>
-        </div>
 
-        <!-- Imagen del taller con ratio protegido -->
-        <div class="tc-hero-imagen">
-          <img src="../img/hacking.webp" alt="Ilustración del laboratorio de redes y ciberseguridad" width="800"
-            height="450" />
-        </div>
-      </section>
+          <div class="tc-cta-buttons">
+            <!-- Acción primaria hacia el formulario de inscripción -->
+            <a
+              href="./formulario-pagina.html"
+              class="tc-btn tc-btn--primary"
+            >
+              Inscribirme en este taller
+            </a>
+            <!-- Acción secundaria -->
+            <a href="contacto.html" class="tc-btn tc-btn--secondary">
+              Contactar con el centro
+            </a>
+          </div>
+        </section>
+      </main>
 
-      <hr class="tc-divider" />
-
-      <!-- Enlace para volver al listado de talleres -->
-      <a href="listado-talleres.html" class="tc-back-link">
-        &larr; Volver al listado de talleres
-      </a>
-
-      <!-- Cajas modulares de metadatos (Grid en escritorio, lista en móvil) -->
-      <section class="tc-metadata-grid" aria-label="Datos del taller">
-        <article class="tc-metadata-item">
-          <span class="tc-metadata-label">Fecha y horario</span>
-          <span class="tc-metadata-value">
-            Jueves, 15 de octubre de 2026 &middot; 16:30 &ndash; 18:30 h
-          </span>
-        </article>
-
-        <article class="tc-metadata-item">
-          <span class="tc-metadata-label">Ubicación</span>
-          <span class="tc-metadata-value">
-            Aula 204, Edificio Principal
-          </span>
-        </article>
-
-        <article class="tc-metadata-item">
-          <span class="tc-metadata-label">Plazas y nivel</span>
-          <span class="tc-metadata-value">
-            15 disponibles &middot; Nivel iniciación
-          </span>
-        </article>
-
-        <article class="tc-metadata-item">
-          <span class="tc-metadata-label">Duración</span>
-          <span class="tc-metadata-value"> 2 horas académicas </span>
-        </article>
-      </section>
-
-      <!-- Información y requisitos del taller -->
-      <section class="tc-card">
-        <h2 class="tc-title-h2">Información para el alumnado</h2>
-        <ul class="tc-list">
-          <li>No se requieren conocimientos previos de programación.</li>
-          <li>Certificado al finalizar el taller.</li>
-          <li>
-            Plazas limitadas &ndash; confirma tu asistencia con antelación.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Tarjeta CTA enlazada a la pantalla de formulario -->
-      <section class="tc-card tc-cta-card">
-        <h2 class="tc-title-h2">
-          ¿Listo para dar tus primeros pasos en ciberseguridad?
-        </h2>
-        <p class="tc-caption tc-cta-caption">
-          Aprende los fundamentos de la ciberseguridad de la mano de expertos
-          y comienza tu camino hacia una carrera más segura.
-        </p>
-
-        <div class="tc-cta-buttons">
-          <!-- Acción primaria hacia el formulario de inscripción -->
-          <a href="./formulario-pagina.html" class="tc-btn tc-btn--primary">
-            Inscribirme en este taller
-          </a>
-          <!-- Acción secundaria -->
-          <a href="contacto.html" class="tc-btn tc-btn--secondary">
-            Contactar con el centro
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <!-- Pie de página -->
-    <footer class="tc-footer">
-      <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
-      <span>Diseño de Interfaces Web (DA2D1A)</span>
-    </footer>
-  </div>
-</body>
-
+      <!-- Pie de página -->
+      <footer class="tc-footer">
+        <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+        <span>Diseño de Interfaces Web (DA2D1A)</span>
+      </footer>
+    </div>
+  </body>
 </html>
