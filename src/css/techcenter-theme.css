@@ -1,40 +1,41 @@
 /* Variables con los colores y medidas que acordamos en el grupo */
 :root {
   /* Colores principales */
-  --tc-color-bg-canvas: #f7f8fa; /* Fondo blanco limpio */
-  --tc-color-surface-card: #f3f2f1; /* Gris claro para tarjetas */
-  --tc-color-brand-primary: #003366; /* Azul marino para títulos y logo */
-  --tc-color-text-main: #0b0c0c; /* Texto oscuro de alto contraste */
-  --tc-color-text-muted: #505a5f; /* Gris para textos secundarios */
+  --tc-color-bg-canvas: #ffffff; /* Fondo blanco limpio (cumplimiento estricto WCAG AA/AAA) */
+  --tc-color-surface-card: #f3f2f1; /* Gris claro para tarjetas y contenedores */
+  --tc-color-brand-primary: #003366; /* Azul marino corporativo para títulos y logo */
+  --tc-color-text-main: #0b0c0c; /* Texto oscuro de alto contraste (Ratio ≥ 7:1) */
+  --tc-color-text-muted: #505a5f; /* Gris para textos secundarios y leyendas */
   --tc-color-border-subtle: #d8d8d8; /* Bordes suaves de separación */
 
-  /* Botones y acciones */
-  --tc-color-action-primary: #00703c; /* Verde para el botón principal */
-  --tc-color-action-primary-dark: #002d18; /* Verde oscuro para el borde de abajo (relieve) */
+  /* Botones, acentos y acciones */
+  --tc-color-action-primary: #00703c; /* Verde sólido para el botón de avance e inscripción */
+  --tc-color-action-primary-dark: #002d18; /* Borde inferior sólido de 2px para relieve 3D */
   --tc-color-action-primary-hover: #005a30; /* Verde un poco más oscuro al pasar el ratón */
+  --tc-color-accent-secondary: #638600; /* Tono verde-ámbar para soporte visual interactivo */
   --tc-color-action-sec-bg: #f3f2f1; /* Fondo del botón secundario */
   --tc-color-action-sec-border: #0b0c0c; /* Borde negro del botón secundario */
 
   /* Accesibilidad y errores */
-  --tc-color-focus-halo: #ffbf00; /* Amarillo para el foco con teclado */
-  --tc-color-focus-stroke: #0b0c0c; /* Borde negro para que resalte el foco */
-  --tc-color-error: #d43510; /* Rojo para avisos y asteriscos */
+  --tc-color-focus-halo: #ffbf00; /* Halo amarillo de alta visibilidad para el foco */
+  --tc-color-focus-stroke: #0b0c0c; /* Trazo interno negro de 3px para resaltar el foco */
+  --tc-color-error: #d43510; /* Rojo para asteriscos obligatorios (*), avisos y errores */
 
   /* Tipografía (fuente del sistema limpia) */
   --tc-font-family: "Segoe UI", Calibri, sans-serif;
 
-  /* Tamaños de letra para ordenador */
-  --tc-font-size-h1: 34px; /* Título grande */
-  --tc-font-size-h2: 20px; /* Títulos de tarjetas */
-  --tc-font-size-body: 18px; /* Texto normal */
-  --tc-font-size-caption: 15px; /* Texto pequeño */
-  --tc-font-size-meta-label: 11px; /* Etiqueta superior (ej: FECHA) */
-  --tc-font-size-meta-value: 13.5px; /* Dato de la tarjeta */
+  /* Tamaños de letra para ordenador (Desktop) */
+  --tc-font-size-h1: 34px; /* H1: Título principal de pantalla (Bold 700) */
+  --tc-font-size-h2: 20px; /* H2: Cabeceras de bloque y tarjetas (Semibold 600) */
+  --tc-font-size-body: 19px; /* Cuerpo de texto (Regular 400) */
+  --tc-font-size-caption: 16px; /* Leyenda / Caption (Regular 400) */
+  --tc-font-size-meta-label: 11px; /* Etiqueta superior de metadatos en MAYÚSCULAS */
+  --tc-font-size-meta-value: 13.5px; /* Valor del dato de metadatos (Semibold 600) */
 
-  /* Bordes redondeados */
-  --tc-radius-pill: 24px; /* Botón tipo píldora */
-  --tc-radius-card: 16px; /* Tarjetas redondeadas */
-  --tc-touch-target-min: 44px; /* Altura mínima de 44px para pulsar bien */
+  /* Geometría y dimensiones */
+  --tc-radius-pill: 24px; /* Botones de acción y silueta en píldora */
+  --tc-radius-card: 16px; /* Tarjetas y contenedores con esquinas redondeadas suaves (12px a 16px) */
+  --tc-touch-target-min: 44px; /* Altura mínima de interacción de 44px (área de toque táctil) */
 }
 
 /* Reset básico para que no descuadren los paddings */
@@ -49,7 +50,7 @@ body {
   padding: 0;
   font-family: var(--tc-font-family);
   font-size: var(--tc-font-size-body);
-  line-height: 1.45;
+  line-height: 1.4; /* Interlineado base según guía (1.25 a 1.4) */
   color: var(--tc-color-text-main);
   background-color: var(--tc-color-bg-canvas);
 }
@@ -71,11 +72,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Foco accesible para navegar con el tabulador (anillo amarillo + negro) */
+/* Foco accesible para navegar con el tabulador (anillo amarillo #FFBF00 + trazo interno negro de 3px) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
-.tc-btn:focus-visible {
+select:focus-visible,
+textarea:focus-visible,
+.tc-btn:focus-visible,
+.tc-chip:focus-visible {
   outline: 3px solid var(--tc-color-focus-stroke);
   box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
 }
@@ -96,13 +100,13 @@ input:focus-visible,
   margin: 0 0 0.75rem 0;
 }
 
-/* Botones con forma de píldora y mínimo 44px de alto */
+/* Botones con forma de píldora, mínimo 44px de alto y padding oficial (8px vertical × 10px horizontal) */
 .tc-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: var(--tc-touch-target-min);
-  padding: 8px 18px;
+  padding: 8px 10px;
   font-family: var(--tc-font-family);
   font-size: var(--tc-font-size-caption);
   font-weight: 600;
@@ -126,7 +130,7 @@ input:focus-visible,
   background-color: var(--tc-color-action-primary-hover);
 }
 
-/* Al hacer clic baja 2px simulando una pulsación real */
+/* Al hacer clic baja 2px simulando una pulsación real y oculta el relieve */
 .tc-btn--primary:active {
   transform: translateY(2px);
   border-bottom-color: transparent;
@@ -145,6 +149,35 @@ input:focus-visible,
 
 .tc-btn--secondary:active {
   transform: translateY(1px);
+}
+
+/* Chips de filtro: etiquetas ovaladas compactas completamente redondeadas */
+.tc-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 4px 12px;
+  font-family: var(--tc-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--tc-radius-pill);
+  background-color: var(--tc-color-surface-card);
+  color: var(--tc-color-text-main);
+  border: 1px solid var(--tc-color-border-subtle);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.tc-chip:hover {
+  background-color: #e5e4e3;
+}
+
+/* Indicador de campo obligatorio y textos de alerta */
+.tc-required,
+.tc-text-error {
+  color: var(--tc-color-error);
+  font-weight: 700;
 }
 
 /* Tarjeta estándar gris con bordes suaves */
@@ -194,9 +227,9 @@ input:focus-visible,
 /* Cambios automáticos para móvil (pantallas de 640px o menos) */
 @media (max-width: 640px) {
   :root {
-    --tc-font-size-h1: 24px; /* H1 más pequeño en móvil */
-    --tc-font-size-body: 16px;
-    --tc-font-size-caption: 14px;
+    --tc-font-size-h1: 24px; /* H1 escala a 24px en móvil */
+    --tc-font-size-body: 16px; /* Cuerpo escala a 16px en móvil */
+    --tc-font-size-caption: 14px; /* Leyenda escala a 14px en móvil */
   }
 
   /* Los botones ocupan todo el ancho para pulsar fácil con el dedo */
