@@ -4,73 +4,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./Guia de estilos/techcenter-theme.css" />
+  <link rel="stylesheet" href="../Guia de estilos/techcenter-theme.css" />
+  <link rel="stylesheet" href="../src/css/confirmacionForm.css" />
   <title>Confirmación envío</title>
 </head>
 
 <body>
-  <header>
-    <div class="">
-      <img scr="" alt="logo" />
-      <p>TechCenter</p>
-    </div>
-    <div class="">
-      <a href="">Inicio</a>
-      <a href="">Sobre nosotros</a>
-      <a href="">Contacto</a>
-      <button>Buscar cursos</button>
-    </div>
-  </header>
+  <header class="tc-header">
+        <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
+
+        <nav class="tc-nav" aria-label="Navegación principal">
+            <ul class="tc-nav-links">
+                <li>
+                    <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
+                </li>
+                <li>
+                    <a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
+                </li>
+                <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+            </ul>
+
+            <a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
+
+            <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
   <main>
-    <div class="confirmacion">
-      <img src="" alt="logo" />
-      <h1>¡Inscripción confirmada!</h1>
-      <p>
+    <div class="inscription-ok-text">
+      <img src="../src/img/TechCenter-logo.png" alt="logo" />
+      <h1 class="tc-title-h1">¡Inscripción confirmada!</h1>
+      <p class="tc-caption tc-cta-caption">
         Tu plaza en el taller ha sido confirmada correctamente. Hemos enviado
         un correo de confirmación a tu dirección de email.
       </p>
     </div>
-    <div class="detalles_reserva">
-      <h3>Detalles de la reserva</h3>
-      <table>
+    <div class="tc-confirmation-card">
+      <h2 class="tc-title-h2">Detalles de la reserva</h2>
+      <table class="data-summ">
         <tr>
-          <td>Taller</td>
-          <td>Hacking Ético y Auditoría de Redes</td>
+          <td class="tc-metadata-label">Taller</td>
+          <td class="tc-metadata-value">Hacking Ético y Auditoría de Redes</td>
         </tr>
         <tr>
-          <td>Categoría</td>
-          <td>SEGURIDAD INFORMÁTICA</td>
+          <td class="tc-metadata-label">Categoría</td>
+          <td class="tc-metadata-item tc-metadata-value">SEGURIDAD INFORMÁTICA</td>
         </tr>
         <tr>
-          <td>Fecha y horario</td>
-          <td>Jueves, 15 de octubre de 2026 | 16:30 – 18:30 h</td>
+          <td class="tc-metadata-label">Fecha y horario</td>
+          <td class="tc-metadata-value">Jueves, 15 de octubre de 2026 | 16:30 – 18:30 h</td>
         </tr>
         <tr>
-          <td>Ubicación</td>
-          <td>Aula 204, Edificio Principal</td>
+          <td class="tc-metadata-label">Ubicación</td>
+          <td class="tc-metadata-value">Aula 204, Edificio Principal</td>
         </tr>
         <tr>
-          <td>Inscrito/a</td>
-          <td>María García López</td>
+          <td class="tc-metadata-label">Inscrito/a</td>
+          <td class="tc-metadata-value">María García López</td>
         </tr>
         <tr>
-          <td>Email de confirmación</td>
-          <td>maria@ejemplo.com</td>
+          <td class="tc-metadata-label">Email de confirmación</td>
+          <td class="tc-metadata-value">maria@ejemplo.com</td>
         </tr>
       </table>
     </div>
-    <div class="aviso">
-      <img src="TechCenter/src/img/info.png" alt="aviso" />
-      <p>
+    <div class="container-info">
+      <h1>Detalles de la reserva</h1>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+      <div class="detalle-reserva">
+        <span>Taller</span>
+        <p>Hacking ético y auditoría de redes</p>
+      </div>
+    </div>
+    <div class="message">
+      <img src="../src/img/info.png" alt="aviso" />
+      <p class="tc-caption tc-cta-caption">
         Si necesitas cancelar tu inscripción, contacta con el centro con al
         menos 48 horas de antelación.
       </p>
     </div>
-    <div class="navegacion">
-      <button>Volver al listado de talleres</button>
-      <button>Ver detalles del taller</button>
+    <div class="buttons-finish">
+      <button class="tc-btn--primary  tc-btn">Volver al listado de talleres</button>
+      <button class="tc-btn--secondary  tc-btn">Ver detalles del taller</button>
     </div>
   </main>
+
+  <footer class="footer-info">
+    <span class="assignement">TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+    <span class="module">Diseño de Interfaces Web (DA2D1A)</span>
+  </footer>
 </body>
 
 </html>

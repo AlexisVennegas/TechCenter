@@ -1,0 +1,127 @@
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem 3rem 1.25rem;
+}
+
+header>.navegation {}
+
+main tbody {
+    align-items: left;
+    text-align: left;
+}
+
+.--tc-metadata-label {
+    margin-right: auto;
+}
+
+.superior-section {}
+
+.inscription-ok-text {}
+
+.data-summ {}
+
+.message {}
+
+.buttons-finish {}
+
+.footer-info {}
+
+.assignement {}
+
+.module {}
+
+.tc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--tc-color-border-subtle);
+}
+
+.tc-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--tc-color-brand-primary);
+    text-decoration: none !important;
+}
+
+.tc-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tc-nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+}
+
+.tc-nav-link {
+    color: var(--tc-color-text-main);
+    font-size: var(--tc-font-size-caption);
+    font-weight: 600;
+}
+
+button[type="button"].tc-menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--tc-touch-target-min);
+    height: var(--tc-touch-target-min);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--tc-color-text-main);
+}
+
+
+
+/* Media Query: Adaptación móvil (≤ 640px) */
+@media (max-width: 640px) {
+
+    .tc-nav-links,
+    .tc-nav .tc-btn--secondary {
+        display: none;
+    }
+
+    button[type="button"].tc-menu-btn {
+        display: inline-flex;
+    }
+
+    /* Reordenación visual en móvil: la imagen se coloca arriba */
+    .tc-hero {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "imagen"
+            "texto";
+        gap: 1.25rem;
+    }
+
+    .tc-hero-imagen {
+        max-height: 220px;
+    }
+
+    .tc-cta-buttons {
+        flex-direction: column;
+    }
+
+    .tc-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+
+
+.container-info {
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: var(--tc-radi);
+}
+
+.detalle-reserva {}
