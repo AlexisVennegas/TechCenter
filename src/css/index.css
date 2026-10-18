@@ -72,6 +72,15 @@ button[type="button"].tc-menu-btn {
     object-fit: cover;
 }
 
+.tc-chip--active {
+    background-color: var(--tc-color-brand-primary);
+    color: #ffffff;
+}
+
+.tc-chip--active:hover {
+    background-color: var(--tc-color-brand-primary);
+}
+
 .card-space {
     flex: 1;
 }
@@ -82,10 +91,12 @@ button[type="button"].tc-menu-btn {
     border-radius: 5px;
     background-color: #EFF2F6;
 }
-.card-space > .tc-caption{
+
+.card-space>.tc-caption {
     display: flex;
     align-items: center;
 }
+
 .tc-footer {
     border-top: 1px solid var(--tc-color-border-subtle);
     padding-top: 1.25rem;
@@ -114,8 +125,18 @@ button[type="button"].tc-menu-btn {
     .tc-card-image img {
         width: 100%;
     }
-    .tc-caption{
+
+    .tc-caption {
         gap: 10px;
+    }
+
+    .tc-chip--active {
+        background-color: var(--tc-color-brand-primary);
+        color: #ffffff;
+    }
+
+    .tc-chip--active:hover {
+        background-color: var(--tc-color-brand-primary);
     }
 
     .container-card-taller {
