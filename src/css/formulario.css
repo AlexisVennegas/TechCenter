@@ -1,0 +1,387 @@
+@import url("../css/techcenter-theme.css");
+
+/* Estilos generales y contenedor principal */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--tc-color-text-main);
+  background-color: var(--tc-color-bg-canvas);
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-body);
+  line-height: 1.4;
+}
+
+/* Contenedor principal centrado */
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 3rem 1.25rem;
+}
+
+/* Cabecera estructurada con Flexbox */
+.tc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--tc-color-border-subtle);
+}
+
+.tc-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--tc-color-brand-primary);
+  text-decoration: none !important;
+}
+
+.tc-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tc-nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
+}
+
+.tc-nav-link {
+  color: var(--tc-color-text-main);
+  font-size: var(--tc-font-size-caption);
+  font-weight: 600;
+}
+
+/* Selector de atributo + clase: botón de menú hamburguesa (oculto en escritorio) */
+button[type="button"].tc-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--tc-touch-target-min);
+  height: var(--tc-touch-target-min);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--tc-color-text-main);
+}
+
+/* Enlace de retroceso */
+.volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--tc-font-size-caption);
+  font-weight: 600;
+  color: var(--tc-color-brand-primary);
+  text-decoration: none;
+  margin: 1.5rem 0;
+}
+
+.volver:hover {
+  text-decoration: underline;
+}
+
+/* Tarjeta con los detalles del taller (Banner de persistencia de contexto) */
+.tarjeta-taller {
+  position: relative;
+  background-color: var(--tc-color-surface-card);
+  border: 1px solid var(--tc-color-border-subtle);
+  border-radius: var(--tc-radius-card);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.categoria {
+  font-size: var(--tc-font-size-meta-label);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tc-color-brand-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.plazas {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+  font-size: var(--tc-font-size-meta-value);
+  font-weight: 600;
+  color: var(--tc-color-text-main);
+  display: inline-flex;
+  align-items: center;
+}
+
+.punto {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.5rem;
+  background-color: var(--tc-color-action-primary);
+  border-radius: 50%;
+}
+
+.tarjeta-taller h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: var(--tc-font-size-h1);
+  font-weight: 700;
+  color: var(--tc-color-brand-primary);
+  line-height: 1.2;
+}
+
+.datos-taller {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: var(--tc-font-size-meta-value);
+  font-weight: 600;
+  color: var(--tc-color-text-muted);
+}
+
+/* Formulario de inscripción */
+.seccion-formulario h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: var(--tc-font-size-h2);
+  font-weight: 600;
+  color: var(--tc-color-brand-primary);
+}
+
+.ayuda {
+  margin: 0 0 1.5rem 0;
+  font-size: var(--tc-font-size-caption);
+  color: var(--tc-color-text-muted);
+}
+
+/* Asterisco rojo de campos obligatorios según guía (#D43510) */
+.ayuda span,
+.campo label span,
+.aceptacion label span {
+  color: var(--tc-color-error);
+  font-weight: 700;
+}
+
+.formulario {
+  background-color: var(--tc-color-surface-card);
+  border: 1px solid var(--tc-color-border-subtle);
+  border-radius: var(--tc-radius-card);
+  padding: 2rem 1.75rem;
+}
+
+.rejilla-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.campo label {
+  margin-bottom: 0.5rem;
+  font-size: var(--tc-font-size-caption);
+  font-weight: 600;
+  color: var(--tc-color-text-main);
+}
+
+/* Inputs, selects y textareas con altura mínima de 44px */
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: var(--tc-touch-target-min);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-caption);
+  color: var(--tc-color-text-main);
+  background-color: #ffffff;
+  border: 1px solid var(--tc-color-border-subtle);
+  border-radius: 6px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.campo textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Anillo de foco accesible GOV.UK (#FFBF00 + reborde negro de 3px) */
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+  border-color: var(--tc-color-focus-stroke);
+}
+
+.campo textarea::placeholder {
+  color: var(--tc-color-text-muted);
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+/* Checkbox de aceptación legal */
+.aceptacion {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.aceptacion input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--tc-color-action-primary);
+}
+
+.aceptacion input:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+.aceptacion label {
+  font-size: var(--tc-font-size-caption);
+  color: var(--tc-color-text-main);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+/* Botones de acción con ergonomía táctil (mínimo 44px de alto) */
+.acciones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tc-touch-target-min);
+  padding: 8px 18px;
+  font-family: var(--tc-font-family);
+  font-size: var(--tc-font-size-caption);
+  font-weight: 600;
+  border-radius: var(--tc-radius-pill);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition:
+    background-color 0.15s ease,
+    transform 0.05s ease;
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--tc-color-focus-stroke);
+  box-shadow: 0 0 0 3px var(--tc-color-focus-halo);
+}
+
+/* Botón principal (verde con relieve abajo de 2px) */
+.boton-principal {
+  background-color: var(--tc-color-action-primary);
+  color: #ffffff;
+  border-bottom: 2px solid var(--tc-color-action-primary-dark);
+}
+
+.boton-principal:hover {
+  background-color: var(--tc-color-action-primary-hover);
+}
+
+/* Al hacer clic baja 2px simulando pulsación y oculta el borde inferior */
+.boton-principal:active {
+  transform: translateY(2px);
+  border-bottom-color: transparent;
+}
+
+/* Botón secundario (gris con borde de contraste) */
+.boton-secundario {
+  background-color: var(--tc-color-action-sec-bg);
+  color: var(--tc-color-text-main);
+  border: 1px solid var(--tc-color-action-sec-border);
+}
+
+.boton-secundario:hover {
+  background-color: #e5e4e3;
+}
+
+.boton-secundario:active {
+  transform: translateY(1px);
+}
+
+/* Pie de página */
+.tc-footer {
+  border-top: 1px solid var(--tc-color-border-subtle);
+  padding-top: 1.25rem;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--tc-font-size-caption);
+  color: var(--tc-color-text-muted);
+}
+
+/* Media Query: Adaptación móvil (≤ 640px) */
+@media (max-width: 640px) {
+  .tc-nav-links,
+  .tc-nav .tc-btn--secondary {
+    display: none;
+  }
+
+  button[type="button"].tc-menu-btn {
+    display: inline-flex;
+  }
+
+  .plazas {
+    position: static;
+    margin-bottom: 0.75rem;
+  }
+
+  .datos-taller {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .formulario {
+    padding: 1.5rem 1rem;
+  }
+
+  .rejilla-campos {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+  }
+
+  .campo-completo {
+    grid-column: auto;
+  }
+
+  /* Los botones ocupan todo el ancho y se apilan verticalmente */
+  .acciones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .acciones .boton {
+    width: 100%;
+  }
+
+  .tc-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
