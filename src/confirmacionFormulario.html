@@ -4,120 +4,90 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../Guia de estilos/techcenter-theme.css" />
-  <link rel="stylesheet" href="../src/css/confirmacionForm.css" />
+  <link rel="stylesheet" href="./css/confirmacionForm.css" />
   <title>Confirmación envío</title>
 </head>
 
 <body>
   <header class="tc-header">
-        <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
+    <a href="listado-talleres.html" class="tc-logo">TechCenter</a>
 
-        <nav class="tc-nav" aria-label="Navegación principal">
-            <ul class="tc-nav-links">
-                <li>
-                    <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
-                </li>
-                <li>
-                    <a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
-                </li>
-                <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
-            </ul>
+    <nav class="tc-nav" aria-label="Navegación principal">
+      <ul class="tc-nav-links">
+        <li>
+          <a href="listado-talleres.html" class="tc-nav-link">Inicio</a>
+        </li>
+        <li>
+          <a href="sobre-nosotros.html" class="tc-nav-link">Sobre nosotros</a>
+        </li>
+        <li><a href="contacto.html" class="tc-nav-link">Contacto</a></li>
+      </ul>
 
-            <a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
+      <a href="listado-talleres.html" class="tc-btn tc-btn--secondary">Buscar cursos</a>
 
-            <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                    stroke-linecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </nav>
-    </header>
+      <button class="tc-menu-btn" aria-label="Abrir menú" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
 
   <main>
     <div class="inscription-ok-text">
       <img src="../src/img/TechCenter-logo.png" alt="logo" />
       <h1 class="tc-title-h1">¡Inscripción confirmada!</h1>
-      <p class="tc-caption tc-cta-caption">
+      <p class="tc-caption">
         Tu plaza en el taller ha sido confirmada correctamente. Hemos enviado
         un correo de confirmación a tu dirección de email.
       </p>
     </div>
-    <div class="tc-confirmation-card">
+    <div class="tc-card">
       <h2 class="tc-title-h2">Detalles de la reserva</h2>
-      <table class="data-summ">
-        <tr>
-          <td class="tc-metadata-label">Taller</td>
-          <td class="tc-metadata-value">Hacking Ético y Auditoría de Redes</td>
-        </tr>
-        <tr>
-          <td class="tc-metadata-label">Categoría</td>
-          <td class="tc-metadata-item tc-metadata-value">SEGURIDAD INFORMÁTICA</td>
-        </tr>
-        <tr>
-          <td class="tc-metadata-label">Fecha y horario</td>
-          <td class="tc-metadata-value">Jueves, 15 de octubre de 2026 | 16:30 – 18:30 h</td>
-        </tr>
-        <tr>
-          <td class="tc-metadata-label">Ubicación</td>
-          <td class="tc-metadata-value">Aula 204, Edificio Principal</td>
-        </tr>
-        <tr>
-          <td class="tc-metadata-label">Inscrito/a</td>
-          <td class="tc-metadata-value">María García López</td>
-        </tr>
-        <tr>
-          <td class="tc-metadata-label">Email de confirmación</td>
-          <td class="tc-metadata-value">maria@ejemplo.com</td>
-        </tr>
-      </table>
-    </div>
-    <div class="container-info">
-      <h1>Detalles de la reserva</h1>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Taller</span>
+        <p class="tc-metadata-value">Hacking ético y auditoría de redes</p>
       </div>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Categoría</span>
+        <p class="tc-metadata-item tc-metadata-value">SEGURIDAD INFORMÁTICA</p>
       </div>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Fecha y horario</span>
+        <p class="tc-metadata-value">Jueves, 15 de octubre de 2026 | 16:30 - 18:30</p>
       </div>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Ubicación</span>
+        <p class="tc-metadata-value">Aula 204, Edificio Principal</p>
       </div>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Inscrito/a</span>
+        <p class="tc-metadata-value">María García López</p>
       </div>
       <div class="detalle-reserva">
-        <span>Taller</span>
-        <p>Hacking ético y auditoría de redes</p>
+        <span class="tc-metadata-label">Email de confirmación</span>
+        <p class="tc-metadata-value">maria@ejemplo.com</p>
       </div>
     </div>
     <div class="message">
       <img src="../src/img/info.png" alt="aviso" />
-      <p class="tc-caption tc-cta-caption">
+      <p class="tc-caption">
         Si necesitas cancelar tu inscripción, contacta con el centro con al
         menos 48 horas de antelación.
       </p>
     </div>
     <div class="buttons-finish">
-      <button class="tc-btn--primary  tc-btn">Volver al listado de talleres</button>
-      <button class="tc-btn--secondary  tc-btn">Ver detalles del taller</button>
+      <a href="../index.html" class="tc-btn tc-btn--primary"> Volver al listado de talleres </a>
+      <a href="./detalle-taller.html" class="tc-btn--secondary  tc-btn">Ver detalles del taller</a>
     </div>
   </main>
 
-  <footer class="footer-info">
-    <span class="assignement">TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
-    <span class="module">Diseño de Interfaces Web (DA2D1A)</span>
+  <footer class="tc-footer">
+    <span>TechCenter &copy; 2026 &middot; IES Clara del Rey</span>
+    <span>Diseño de Interfaces Web (DA2D1A)</span>
   </footer>
 </body>
 
